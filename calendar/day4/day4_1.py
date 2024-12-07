@@ -14,6 +14,8 @@ for line_index, line in enumerate(lines):
         if char != 'X':
             continue
 
+        #Horizontal checking
+
         left_to_right = line[char_index:char_index+4]
 
         if left_to_right == "XMAS":
@@ -26,7 +28,6 @@ for line_index, line in enumerate(lines):
 
         if right_to_left == "XMAS":
             result += 1
-
 
         #Vertical checking
 
@@ -44,7 +45,7 @@ for line_index, line in enumerate(lines):
         if vertical_bot == "XMAS":
             result += 1
 
-    #Diagonal checking
+        #Diagonal checking
 
         diagonal_top_left = ""
         for j in range(4):
